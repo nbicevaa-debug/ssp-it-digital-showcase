@@ -7,20 +7,32 @@ const Footer = () => {
   return (
     <footer id="contacts" className="bg-foreground text-primary-foreground py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
           {/* Company Info */}
-          <div>
+          <div className="flex-1">
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="ССП-ИТ" className="h-12 w-12 object-contain bg-card rounded-lg p-1" />
               <span className="text-xl font-bold">ССП-ИТ</span>
             </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            <p className="text-primary-foreground/70 text-sm leading-relaxed max-w-xs">
               Разработка программного обеспечения в области информационных технологий и цифровизации
             </p>
           </div>
 
+          {/* Address */}
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-6">Адрес</h3>
+            <div className="flex items-start gap-3 text-primary-foreground/70">
+              <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+              <span className="text-sm leading-relaxed">
+                197110, г. Санкт-Петербург,<br />
+                наб. Адмирала Лазарева, д. 14, стр. 1
+              </span>
+            </div>
+          </div>
+
           {/* Contact Info */}
-          <div>
+          <div className="flex-1">
             <h3 className="text-lg font-semibold mb-6">Контакты</h3>
             <div className="space-y-4">
               <a 
@@ -37,18 +49,6 @@ const Footer = () => {
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">ssp-it@yandex.ru</span>
               </a>
-            </div>
-          </div>
-
-          {/* Address */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Адрес</h3>
-            <div className="flex items-start gap-3 text-primary-foreground/70">
-              <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-              <span className="text-sm leading-relaxed">
-                197110, г. Санкт-Петербург,<br />
-                наб. Адмирала Лазарева, д. 14, стр.
-              </span>
             </div>
           </div>
         </div>
